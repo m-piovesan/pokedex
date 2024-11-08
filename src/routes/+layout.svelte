@@ -1,9 +1,6 @@
 <script lang="ts">
-  import '../styles/global.css';
-  import './styles.scss'
+    import '../styles/global.scss';
+    import Sidebar from '../components/Sidebar/Sidebar.svelte'
 </script>
 
-<h1>hello world</h1>
-<button>
-    click me
-</button>
+<Sidebar />

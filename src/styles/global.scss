@@ -1,0 +1,65 @@
+/* reset.scss - Reset de estilos globais */
+@import '../styles/mixins.scss';
+
+/* Reset básico */
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+/* Definir altura total da página */
+html, body {
+  height: 100%;
+  background-color: $base-white; /* Altere para sua cor de fundo desejada */
+}
+
+/* Garantir que o texto seja lido de maneira mais suave */
+body {
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* Reset para imagens, vídeos, canvas e outros elementos de mídia */
+img, picture, video, canvas, svg {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+/* Garantir que os inputs, buttons, textareas e selects herdem a fonte corretamente */
+input, button, textarea, select {
+  font: inherit;
+  border: none; /* Remove a borda padrão do botão */
+  background: none; /* Remove o fundo padrão do botão */
+  outline: none; /* Remove o outline para evitar foco indesejado */
+}
+
+/* Evitar que os elementos de texto sejam cortados */
+p, h1, h2, h3, h4, h5, h6 {
+  overflow-wrap: break-word;
+}
+
+/* Reset de lista (remove as bolinhas ou números das listas) */
+ul, ol {
+  list-style: none;
+}
+
+/* Reset de links */
+a {
+  text-decoration: none;
+  color: inherit; /* Altera a cor do link para a cor herdada */
+}
+
+/* Botões */
+button {
+  background: none; /* Remove o fundo padrão */
+  border: none; /* Remove a borda */
+  cursor: pointer; /* Torna o botão interativo */
+  padding: 0; /* Remove o padding padrão */
+  font-family: inherit; /* Garante que a fonte seja a mesma da página */
+  color: inherit; /* Herda a cor do texto */
+}
