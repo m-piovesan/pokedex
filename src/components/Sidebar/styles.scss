@@ -1,4 +1,4 @@
-@import '../../styles/mixins.scss';
+@use '../../styles/mixins.scss' as *;
 
 aside {
     width: 15rem;
@@ -41,7 +41,7 @@ aside {
         transition: all .2s;
 
         &:hover {
-            background-color: $light-blue;
+            background-color: $light-yellow;
 
             * {
                 color: $base-white;

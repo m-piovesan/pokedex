@@ -1,5 +1,5 @@
 /* reset.scss - Reset de estilos globais */
-@import '../styles/mixins.scss';
+@use '../styles/mixins.scss' as *;
 
 /* Reset básico */
 *,
