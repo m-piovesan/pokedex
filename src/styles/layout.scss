@@ -7,6 +7,12 @@
     justify-content: space-between;
 }
 
+.children {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+}
+
 .content {
     width: 15rem;
     height: 100vh;
@@ -23,6 +29,7 @@ section {
     flex-direction: column;
     align-items: center;
     gap: 2rem;
+    position: fixed;
 
     .screen-1 {
         background-color: $base-black;

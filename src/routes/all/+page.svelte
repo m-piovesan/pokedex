@@ -9,7 +9,7 @@
 
     async function fetchPokemonData() {
         try {
-            const response = await axios.get<PokemonApiResponse>('https://pokeapi.co/api/v2/pokemon?limit=17');
+            const response = await axios.get<PokemonApiResponse>('https://pokeapi.co/api/v2/pokemon?limit=107');
             
             const promises = response.data.results.map(async (pokemon) => {
                 const res = await axios.get<Pokemon>(pokemon.url);

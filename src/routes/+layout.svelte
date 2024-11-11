@@ -7,7 +7,10 @@
 
 <div class="base-layout">
     <Sidebar />
-    {@render children()}
+    
+    <div class="children">
+        {@render children()}
+    </div>
 
     <div class="content">
         <section>
