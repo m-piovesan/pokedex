@@ -1,6 +1,6 @@
 @use '../styles/mixins.scss' as *;
 
-.container {
+.base-layout {
     display: flex;
     flex-direction: row;
     width: 100%;

@@ -5,7 +5,7 @@
     let { children } = $props();
 </script>
 
-<div class="container">
+<div class="base-layout">
     <Sidebar />
     {@render children()}
 

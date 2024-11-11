@@ -1,0 +1,9 @@
+@use '../../styles/mixins.scss' as *;
+
+.pokemon-container {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr); /* 5 colunas iguais */
+    grid-gap: 30px; /* Espaçamento entre os itens */
+    align-items: center;
+    justify-items: center;
+}
