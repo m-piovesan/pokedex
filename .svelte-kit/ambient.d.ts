@@ -28,18 +28,19 @@
 declare module '$env/static/private' {
 	export const ELECTRON_RUN_AS_NODE: string;
 	export const CHROME_DESKTOP: string;
-	export const CINNAMON_VERSION: string;
+	export const COLORTERM: string;
 	export const DBUS_SESSION_BUS_ADDRESS: string;
+	export const DESKTOP_AUTOSTART_ID: string;
 	export const DESKTOP_SESSION: string;
 	export const DISPLAY: string;
+	export const ELECTRON_NO_ATTACH_CONSOLE: string;
 	export const GDK_BACKEND: string;
 	export const GDMSESSION: string;
 	export const GDM_LANG: string;
-	export const GIO_LAUNCHED_DESKTOP_FILE: string;
-	export const GIO_LAUNCHED_DESKTOP_FILE_PID: string;
-	export const GJS_DEBUG_OUTPUT: string;
-	export const GJS_DEBUG_TOPICS: string;
 	export const GNOME_DESKTOP_SESSION_ID: string;
+	export const GNOME_KEYRING_CONTROL: string;
+	export const GNOME_TERMINAL_SCREEN: string;
+	export const GNOME_TERMINAL_SERVICE: string;
 	export const GPG_AGENT_INFO: string;
 	export const GTK3_MODULES: string;
 	export const GTK_MODULES: string;
@@ -57,6 +58,7 @@ declare module '$env/static/private' {
 	export const LESSCLOSE: string;
 	export const LESSOPEN: string;
 	export const LOGNAME: string;
+	export const LS_COLORS: string;
 	export const NVM_BIN: string;
 	export const NVM_DIR: string;
 	export const NVM_INC: string;
@@ -68,7 +70,9 @@ declare module '$env/static/private' {
 	export const SHELL: string;
 	export const SHLVL: string;
 	export const SSH_AUTH_SOCK: string;
+	export const TERM: string;
 	export const USER: string;
+	export const VSCODE_CLI: string;
 	export const VSCODE_CODE_CACHE_PATH: string;
 	export const VSCODE_CRASH_REPORTER_PROCESS_TYPE: string;
 	export const VSCODE_CWD: string;
@@ -77,6 +81,7 @@ declare module '$env/static/private' {
 	export const VSCODE_IPC_HOOK: string;
 	export const VSCODE_NLS_CONFIG: string;
 	export const VSCODE_PID: string;
+	export const VTE_VERSION: string;
 	export const XAUTHORITY: string;
 	export const XDG_CONFIG_DIRS: string;
 	export const XDG_CURRENT_DESKTOP: string;
@@ -92,8 +97,6 @@ declare module '$env/static/private' {
 	export const XDG_SESSION_TYPE: string;
 	export const XDG_VTNR: string;
 	export const _: string;
-	export const VSCODE_L10N_BUNDLE_LOCATION: string;
-	export const VSCODE_DOTNET_INSTALL_TOOL_ORIGINAL_HOME: string;
 	export const ELECTRON_NO_ASAR: string;
 	export const NODE_ENV: string;
 }
@@ -129,18 +132,19 @@ declare module '$env/dynamic/private' {
 	export const env: {
 		ELECTRON_RUN_AS_NODE: string;
 		CHROME_DESKTOP: string;
-		CINNAMON_VERSION: string;
+		COLORTERM: string;
 		DBUS_SESSION_BUS_ADDRESS: string;
+		DESKTOP_AUTOSTART_ID: string;
 		DESKTOP_SESSION: string;
 		DISPLAY: string;
+		ELECTRON_NO_ATTACH_CONSOLE: string;
 		GDK_BACKEND: string;
 		GDMSESSION: string;
 		GDM_LANG: string;
-		GIO_LAUNCHED_DESKTOP_FILE: string;
-		GIO_LAUNCHED_DESKTOP_FILE_PID: string;
-		GJS_DEBUG_OUTPUT: string;
-		GJS_DEBUG_TOPICS: string;
 		GNOME_DESKTOP_SESSION_ID: string;
+		GNOME_KEYRING_CONTROL: string;
+		GNOME_TERMINAL_SCREEN: string;
+		GNOME_TERMINAL_SERVICE: string;
 		GPG_AGENT_INFO: string;
 		GTK3_MODULES: string;
 		GTK_MODULES: string;
@@ -158,6 +162,7 @@ declare module '$env/dynamic/private' {
 		LESSCLOSE: string;
 		LESSOPEN: string;
 		LOGNAME: string;
+		LS_COLORS: string;
 		NVM_BIN: string;
 		NVM_DIR: string;
 		NVM_INC: string;
@@ -169,7 +174,9 @@ declare module '$env/dynamic/private' {
 		SHELL: string;
 		SHLVL: string;
 		SSH_AUTH_SOCK: string;
+		TERM: string;
 		USER: string;
+		VSCODE_CLI: string;
 		VSCODE_CODE_CACHE_PATH: string;
 		VSCODE_CRASH_REPORTER_PROCESS_TYPE: string;
 		VSCODE_CWD: string;
@@ -178,6 +185,7 @@ declare module '$env/dynamic/private' {
 		VSCODE_IPC_HOOK: string;
 		VSCODE_NLS_CONFIG: string;
 		VSCODE_PID: string;
+		VTE_VERSION: string;
 		XAUTHORITY: string;
 		XDG_CONFIG_DIRS: string;
 		XDG_CURRENT_DESKTOP: string;
@@ -193,8 +201,6 @@ declare module '$env/dynamic/private' {
 		XDG_SESSION_TYPE: string;
 		XDG_VTNR: string;
 		_: string;
-		VSCODE_L10N_BUNDLE_LOCATION: string;
-		VSCODE_DOTNET_INSTALL_TOOL_ORIGINAL_HOME: string;
 		ELECTRON_NO_ASAR: string;
 		NODE_ENV: string;
 		[key: `PUBLIC_${string}`]: undefined;

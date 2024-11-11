@@ -12,20 +12,20 @@
     </p>
 
     <div class="links-group">
-        <button class="aside-link">
+        <a class="aside-link" href="/">
             <Home />
             <span>Início</span>
-        </button>
+        </a>
     
-        <button class="aside-link">
+        <a class="aside-link" href="./all">
             <CircleOff />
             <span>Ver todos</span>
-        </button>
+        </a>
     
-        <button class="aside-link">
+        <a class="aside-link" href="./profile">
             <UserRound />
             <span>Perfil</span>
-        </button>
+        </a>
     </div>
 
     <p>
