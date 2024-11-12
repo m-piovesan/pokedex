@@ -13,8 +13,15 @@
             
             const promises = response.data.results.map(async (pokemon) => {
                 const res = await axios.get<Pokemon>(pokemon.url);
-                
-                return res.data;
+
+                return {
+                    ...res.data,
+                    types: res.data.types.map(typeInfo => ({
+                        type: {
+                            name: typeInfo.type.name
+                        }
+                    }))
+                };
             });
 
             pokemonList = await Promise.all(promises);
@@ -22,6 +29,7 @@
             console.error('Erro ao buscar os dados dos Pokémon:', error);
         }
     }
+
 
     onMount(fetchPokemonData);
 </script>

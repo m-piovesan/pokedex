@@ -13,4 +13,26 @@
         height: 50px;
         margin-top: -30px;
     }
+
+    p {
+        color: $base-white;
+        margin-top: .5rem;
+        text-transform: uppercase;
+        font-family: "Pokemon", sans-serif;
+    }
+}
+
+.types-display {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin-top: .5rem;
+    gap: 1rem;
+
+    span {
+        padding: .2rem .5rem;
+        border-radius: 15px;
+        color: $base-white;
+        font-size: .8rem;
+    }
 }

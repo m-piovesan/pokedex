@@ -1,6 +1,13 @@
 /* reset.scss - Reset de estilos globais */
 @use '../styles/mixins.scss' as *;
 
+@font-face {
+    font-family: "Pokemon";
+    src: url('../../static/PokemonGb-RAeo.ttf');
+    font-weight: normal;
+    font-style: normal;
+}
+
 /* Reset básico */
 *,
 *::before,
