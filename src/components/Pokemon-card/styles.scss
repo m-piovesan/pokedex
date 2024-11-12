@@ -1,16 +1,17 @@
 @use '../../styles/mixins.scss' as *;
 
 .card {
-    width: 150px;
+    width: 200px;
     height: 150px;
     display: flex;
     background-color: $dark-red;
     flex-direction: column;
     align-items: center;
+    border-radius: 0 0 15px 15px;
 
     img {
         width: auto;
-        height: 50px;
+        height: 60px;
         margin-top: -30px;
     }
 
@@ -34,5 +35,6 @@
         border-radius: 15px;
         color: $base-white;
         font-size: .8rem;
+        text-shadow: 2px 2px 3px rgba(0, 0, 0); /* Contorno preto */
     }
 }
