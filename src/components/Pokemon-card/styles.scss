@@ -1,13 +1,14 @@
 @use '../../styles/mixins.scss' as *;
 
 .card {
-    width: 200px;
+    width: 180px;
     height: 150px;
     display: flex;
     background-color: $dark-red;
     flex-direction: column;
     align-items: center;
     border-radius: 0 0 15px 15px;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, .5);
 
     img {
         width: auto;
@@ -19,7 +20,12 @@
         color: $base-white;
         margin-top: .5rem;
         text-transform: uppercase;
-        font-family: "Pokemon", sans-serif;
+        font-family: "Rock Salt", cursive;
+    }
+
+    span {
+        color: $light-yellow;
+        font-size: .8rem;
     }
 }
 

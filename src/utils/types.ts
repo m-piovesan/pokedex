@@ -17,6 +17,7 @@ export interface Pokemon {
     url: string;
     sprites: Sprites;
     types: PokemonType[];
+    id: number;
 }
 export interface PokemonApiResponse {
     results: { name: string, url: string }[];
