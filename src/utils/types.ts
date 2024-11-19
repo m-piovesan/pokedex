@@ -1,11 +1,3 @@
-interface Sprites {
-    other: {
-        showdown: {
-            front_default: string | null;
-        };
-    };
-}
-
 interface PokemonType {
     type: {
         name: string;
@@ -15,9 +7,10 @@ interface PokemonType {
 export interface Pokemon {
     name: string;
     url: string;
-    sprites: Sprites;
+    sprites: string;
     types: PokemonType[];
     id: number;
+    description?: string;
 }
 export interface PokemonApiResponse {
     results: { name: string, url: string }[];

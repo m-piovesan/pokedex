@@ -1,8 +1,8 @@
 <script lang="ts">
     import '../styles/home.scss';
-    import axios from 'axios';
     import { onMount } from 'svelte';
     import { typeColors, type Pokemon } from '../utils/types.js';
+    import { PokemonClient } from 'pokenode-ts';
 
     let dayPokemon: Pokemon;
 
@@ -10,21 +10,40 @@
         return Math.floor(Math.random() * 151) + 1;
     }
 
+    async function getDescription(id: number): Promise<string | undefined> {
+        const api = new PokemonClient();
+
+        try {
+            const data = await api.getCharacteristicById(id);
+            return data.descriptions[7]?.description;
+        } catch (error) {
+            console.error('Erro ao buscar descrição:', error);
+            return 'Descrição não encontrada';
+        }
+    }
+
     async function fetchRandomPokemon() {
         const randomId = getRandomPokemonId();
+        const api = new PokemonClient();
+
         try {
-            const response = await axios.get<Pokemon>(`https://pokeapi.co/api/v2/pokemon/${randomId}`);
-            
+            const data = await api.getPokemonById(randomId);
+
+            const description = await getDescription(randomId);
+
             dayPokemon = {
-                ...response.data,
-                types: response.data.types.map(typeInfo => ({
-                    type: {
-                        name: typeInfo.type.name
-                    }
-                }))
+                id: data.id,
+                name: data.name,
+                url: data.sprites.front_default || '',
+                types: data.types.map((type) => ({
+                    type: type.type,
+                    color: typeColors[type.type.name],
+                })),
+                sprites: data.sprites.other?.dream_world.front_default || '',
+                description: description,
             };
         } catch (error) {
-            console.error('Erro ao buscar os dados do Pokémon:', error);
+            console.error('Erro ao buscar dados do Pokémon:', error);
         }
     }
 
@@ -38,7 +57,7 @@
         <div class="day-pkm-card">
             <div class="day-pkm-content">
                 <img 
-                    src={dayPokemon.sprites.other.showdown.front_default}
+                    src={dayPokemon.url}
                     alt="{dayPokemon.name} sprite"
                 />
     
@@ -48,6 +67,8 @@
                     {#each dayPokemon.types as pkm}
                         <span style="background-color: {typeColors[pkm.type.name]}">{pkm.type.name}</span>
                     {/each}
+
+                    <p>{dayPokemon.description}</p>
                 </div>
             </div>
         </div>
