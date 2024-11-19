@@ -30,7 +30,6 @@
         }
     }
 
-
     onMount(fetchPokemonData);
 </script>
 

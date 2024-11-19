@@ -23,8 +23,13 @@
         </div>
 
         <div class="screen-2">
-            <div></div>
-            <div></div>
+            <div class="animated-card">
+                <div class="backdrop"></div>
+            </div>
+            
+            <div class="animated-card">
+                <div class="backdrop"></div>
+            </div>
         </div>
     </section>
 </div>
