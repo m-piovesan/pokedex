@@ -1,17 +1,17 @@
-interface PokemonType {
-    type: {
-        name: string;
-    };
+export interface PokemonType {
+    name: string;
+    url: string;
 }
 
 export interface Pokemon {
     name: string;
     url: string;
     sprites: string;
-    types: PokemonType[];
+    types: string[]; // Agora são nomes dos tipos
     id: number;
     description?: string;
 }
+
 export interface PokemonApiResponse {
     results: { name: string, url: string }[];
 }
